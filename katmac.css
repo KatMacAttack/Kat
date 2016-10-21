@@ -1,0 +1,37 @@
+ul {
+  font-size: 25px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  bacgkround-color: ##f1f1f1;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+}
+
+li a {
+  text-align: left;
+  border-bottom: : 1px solid black;
+    display: block;
+    width: 60%;
+    color: #000;
+    text-decoration: none;
+}
+
+li a:hover{
+  background-color: #555;
+  color: white;
+}
+
+.active {
+  background-color: #blue;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+h1 {
+  float: right;
+}
