@@ -10,7 +10,7 @@ ul {
   overflow: auto;
 }
 
-li a {
+ul a {
   text-align: left;
   border-bottom: : 1px solid black;
     display: block;
@@ -19,7 +19,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover{
+ul a:hover{
   background-color: #555;
   color: white;
 }
@@ -28,7 +28,7 @@ li a:hover{
   background-color: #blue;
 }
 
-li b:last-child {
+ul b:last-child {
   border-bottom: none;
 }
 
