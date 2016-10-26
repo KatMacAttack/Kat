@@ -28,7 +28,7 @@ li a:hover{
   background-color: #blue;
 }
 
-li:last-child {
+li b:last-child {
   border-bottom: none;
 }
 
