@@ -1,0 +1,27 @@
+* {
+  background-color: #333434;
+  font-family: Helvetica;
+  color: white;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+ body {
+   margin: 10;
+ }
+
+ .logo-image {
+   height: 283px;
+   width: 197px;
+ margin-top: 5px;
+  padding: 5px;
+  float: left;
+  }
+
+  li {
+    span: right;
+    margin-top: 5px;
+    padding: 5px;
+  }

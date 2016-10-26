@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <title>Movie Favorites</title>
+    <link rel="stylesheet" href="movie.css" media="screen">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+    <title>Kat Watches Movies</title>
+  </head>
+  <h1>
+    My Favorite Movies
+  </h1>
+  <h2>
+    Click a thumbnail to find out more:
+  </h2>
+  <table>
+  <tr>
+    <td><img src="images/211.jpg" class="logo-image celda"></td>
+    <td><img src="images/Frank.jpg" class="logo-image frank"></td>
+    <td><img src="images/pb.jpg" class="logo-image pb"></td>
+  </tr>
+  <tr>
+  <td><img src="images/thefall.jpg" class="logo-image fall"></td>
+  <td><img src="images/walle.jpg" class="logo-image walle"></td>
+  <td><img src="images/mononoke.jpg"class="logo-image mononoke"></td>
+</tr>
+</table>
+
+  <body>
+    <li> Title </li>
+    <li> Year </li>
+    <li> Rated </li>
+    <li> Runtime </li>
+    <li> Plot </li>
+  </body>
+  <script>
+  var movieClick = document.querySelectorAll("img");
+
+for (var i = 0; i < movieClick.length; i++) {
+  movieClick[i].addEventListener("click",getMovie);
+}
+
+function getMovie(event) {
+  var clickedMovie = event.target;
+  var imdbID = clickedMovie.id;
+  var url = "https://omdbapi.com/?i=" + imdbID;
+
+  $.get(url, displayResults);
+}
+function displayResults(results) {
+  console.log(results.Title);
+  console.log(results.Year);
+  console.log(results.Rated);
+  console.log(results.Runtime);
+  console.log(results.Plot);
+}
+
+// Assuming there's an <img class="aladdin"> on the page...
+var celda = document.querySelector(".celda");
+celda.addEventListener("click", getCelda);
+
+var frank = document.querySelector(".frank");
+frank.addEventListener("click", getFrank);
+
+var pb = document.querySelector(".pb");
+pb.addEventListener("click", getPB);
+
+var fall = document.querySelector(".fall");
+fall.addEventListener("click", getFall);
+
+var walle = document.querySelector(".walle");
+walle.addEventListener("click", getWalle);
+
+// You'll have multiple event handlers...
+
+function getCelda(event) {
+  $.get("https://omdbapi.com/?i=tt1242422", displayResults);
+}
+  function displayResults(results) {
+    console.log(results.Title);
+    console.log(results.Year);
+    console.log(results.Rated);
+    console.log(results.Runtime);
+    console.log(results.Plot);
+  }
+function getFrank(event) {
+  $.get("https://omdbapi.com/?i=tt1605717", displayResults);
+}
+
+  function displayResults(results)
+   {
+    console.log(results.Title);
+    console.log(results.Year);
+    console.log(results.Rated);
+    console.log(results.Runtime);
+    console.log(results.Plot);
+  }
+function getPB(event) {
+  $.get("https://omdbapi.com/?i=tt0093779", displayResults);
+}
+  function displayResults(results) {
+    console.log(results.Title);
+    console.log(results.Year);
+    console.log(results.Rated);
+    console.log(results.Runtime);
+    console.log(results.Plot);
+  }
+
+function getFall(event) {
+  $.get("https://omdbapi.com/?i=tt0460791", displayResults);
+}
+function displayResults(results) {
+  console.log(results.Title);
+  console.log(results.Year);
+  console.log(results.Rated);
+  console.log(results.Runtime);
+  console.log(results.Plot);
+}
+function getWalle(event) {
+  $.get("https://omdbapi.com/?i=tt0910970", displayResults);
+}
+function displayResults(results) {
+  console.log(results.Title);
+  console.log(results.Year);
+  console.log(results.Rated);
+  console.log(results.Runtime);
+  console.log(results.Plot);
+}
+
+// ...but only one AJAX callback
+function displayResults(results) {
+  // Update the table...
+}
+</script>
+</html>
