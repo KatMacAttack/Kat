@@ -10,24 +10,27 @@ ul {
   overflow: auto;
 }
 
-li a {
+header li {
   text-align: left;
   border-bottom: : 1px solid black;
-    display: block;
+    display: flex 1;
     width: 60%;
     color: #000;
     text-decoration: none;
 }
 
-li a:hover{
+nav:hover{
   background-color: #555;
   color: white;
 }
 
-.active {
+nav.active {
   background-color: #blue;
 }
 
-li:last-child {
+nav:last-child {
   border-bottom: none;
+}
+content {
+  display: flex: 9;
 }

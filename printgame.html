@@ -1,19 +1,21 @@
 <!doctype html>
 <html>
-<meta charset="utf-8" />
-<title>KAT MAC</title>
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
 <head>
    <link rel="stylesheet" href="katmac.css" media="screen">
+   <meta charset="utf-8" />
+   <title>KAT MAC</title>
+
 </head>
 <body>
-<ul>
+<header>
   KAT MAC
+<nav>
   <li> <a href="https://katmacattack.github.io/Kat/work.html">WORK</a> </li>
   <li> <a href="https://katmacattack.github.io/Kat/cv.html">CV</a> </li>
   <li> <a href="https://katmacattack.github.io/Kat/contact.html">CONTACT/INFO</a> </li>
   <li> <a href="https://katmacattack.github.io/Kat/printgame.html">PRINT GAME</a> </li>
-</ul>
+</nav>
+</header>
 <style media="screen" type="text/css">
 h1 {
   font-size: 1.5em;
@@ -21,7 +23,7 @@ h1 {
 }
 #container { width: 800px; }
 ul { padding: 0;  margin: 0;}
-li {
+.main-board li {
   padding: 0;
   float: left;
   margin: 10px;
@@ -36,7 +38,7 @@ img {
   height: 100%;
 }
 </style>
-<h1>Printmaker Memory Game</h1>
+<h1>JS Memory Game</h1>
 <div id = "container" class="main-board"></div>
 <script>
 var images = [];
@@ -54,7 +56,7 @@ randomizeImages();
 var output = "<ol>";
 for (var i = 0; i < 16; i++) {
   output += "<li>";
-  output += "<img src = '" + images[i] + "'/>";
+  output += "<img src='images/' + images[i] + "'/>'";
   output += "</li>";
 }
 output += "</ol>";
