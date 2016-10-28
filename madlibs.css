@@ -12,7 +12,7 @@ input {
 }
 .fill {
   background: #FFDAA0;
-  color: #FFDAA0;
+  color: #FFA296;
   border-bottom: 4px #FFA296;  solid;
   font-family: 'Crimson Text';
   padding: 0 6px;
@@ -20,7 +20,7 @@ input {
 }
 #page-wrap {
   width: 800px;
-  margin: 100px;
+  margin: auto;
   width: 275px;
   left-margin: 500px;
   padding: 2px;
