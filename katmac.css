@@ -1,8 +1,6 @@
 body {
     font-family: 'Amatic SC',
       font-size: 30px;
-      background: #ADFFD2;
-    }
     }
 
 ul {
@@ -32,7 +30,7 @@ nav:hover{
 }
 
 nav.active {
-  background-color: #9EBC9F
+    background: #ADFFD2;
 }
 
 nav:last-child {
