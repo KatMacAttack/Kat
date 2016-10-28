@@ -1,10 +1,17 @@
+body {
+    font-family: 'Amatic SC',
+    color: #9EBC9F;
+    background-color: #353535;
+      font-size: 30px;
+    }
+
 ul {
   font-size: 25px;
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 50%;
-  bacgkround-color: ##f1f1f1;
+  bacgkround-color: #D3B88C
   height: 100%;
   position: fixed;
   overflow: auto;
@@ -15,17 +22,17 @@ header li {
   border-bottom: : 1px solid black;
     display: flex 1;
     width: 60%;
-    color: #000;
+    color: #9EBC9F;
     text-decoration: none;
 }
 
 nav:hover{
-  background-color: #555;
-  color: white;
+  background-color: #F4F2F3;
+  color: #9EBC9F;
 }
 
 nav.active {
-  background-color: #blue;
+  background-color: #9EBC9F
 }
 
 nav:last-child {
@@ -33,4 +40,22 @@ nav:last-child {
 }
 content {
   display: flex: 9;
+}
+#page-wrap {
+     width: 800px;
+     margin: 100px;
+}
+button {
+  margin: 40px;
+}
+input {
+  font-size: 24px;
+}
+.fill {
+  background: white;
+  color: red;
+  border-bottom: 2px black solid;
+  font-family: 'Crimson Text';
+  padding: 0 6px;
+  margin: 4px;
 }

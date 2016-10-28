@@ -1,66 +1,108 @@
 <!DOCTYPE html>
 <head>
-<script src="jquery-3.1.1.slim.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Roboto" rel="stylesheet">
-<style>
-</style>
+  <script src="jquery-3.1.1.slim.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Roboto" rel="stylesheet">
+  <style>
+  body {
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 30px;
+    background: #ADFFD2;
+  }
+  button {
+    margin: 20px;
+  }
+  input {
+    font-size: 24px;
+  }
+  .fill {
+    background: #FFDAA0;
+    color: #FFDAA0;
+    border-bottom: 4px #FFA296;  solid;
+    font-family: 'Crimson Text';
+    padding: 0 6px;
+    margin: 4px;
+  }
+  #page-wrap {
+    width: 800px;
+    margin: 100px;
+  }
+
+  .box {
+    width: 100px;
+    left-margin: 500px;
+    padding: 2px;
+    border: 3px solid #DCD6F7;
+    margin: 0;
+    background-color: #89D9FF;
+    border-radius: 25px;
+  }
+
+  </style>
 </head>
 
 <body>
-<div class="prompt"></div>
-<button>Next</button>
-<script>
-// List of prompts for the user
-var prompts = [
-	'Type your name',
-	'Type an adjective',
-	'Type a noun',
-  'Type an adjective',
-  'Type a plural noun',
-  'Type a verb in past tense',
-  'Type a noun',
-  'Type another name',
-  'Type a noun',
-  'Type an adjective',
-   ];
+  <div id="page-wrap">
+    <div class="prompt"></div>
+    <!-- <div id="page-wrap"> -->
+      <div class="box">
+        <span><button>Next</button></span>
+        <script>
+        // List of prompts for the user
+        var prompts = [
+          'Type your name',
+          'Type an adjective',
+          'Type a noun',
+          'Type an adjective',
+          'Type a plural noun',
+          'Type a verb in past tense',
+          'Type a noun',
+          'Type another name',
+          'Type a noun',
+          'Type an adjective',
+        ];
 
-var answers=[];
-// Keep track of current prompt we're on
-var currentPrompt = 0;
+        var answers=[];
+        // Keep track of current prompt we're on
+        var currentPrompt = 0;
 
-// A function that will call the next prompt
-var nextPrompt = function() {
-  //if there's no answer in the form
-  if (currentPrompt != 0){
-    answers.push($('input').val());
-  }
-	// if there is a next prompt
-	if (currentPrompt < prompts.length) {
-		// put first prompt in all html elements with class
-		$('.prompt').html(prompts[currentPrompt] +'<br><input type="text">');
-		// move the next prompt into variable currentPrompt
-		currentPrompt = currentPrompt + 1;
-	}
-	//or else if we're at the end of the array
-	else {
-		// put a new message into the html.
-		showFinal();
-	}
-}
+        // A function that will call the next prompt
+        var nextPrompt = function() {
+          //if there's no answer in the form
+          if (currentPrompt != 0){
+            answers.push($('input').val());
+          }
+          // if there is a next prompt
+          if (currentPrompt < prompts.length) {
+            // put first prompt in all html elements with class
+            $('.prompt').html(prompts[currentPrompt] +'<br><input type="text">');
+            // move the next prompt into variable currentPrompt
+            currentPrompt = currentPrompt + 1;
+          }
+          //or else if we're at the end of the array
+          else {
+            // put a new message into the html.
+            showFinal();
+          }
+        }
 
-//puts user answers into HTML
-var showFinal = function() {
-  $('.prompt').html('New to the development world, <span class="fill"> '+answers[0]+' </span> and the <span class="fill"> '+answers[1]+' '+answers[2]+' </span> tried their best to make a <span class="fill"> '+answers[3]+' </span> web page about <span class="fill"> '+answers[4]+' </span> . <br> Everything was going well, but then <span class="fill"> '+answers[4]+' </span> <span class="fill"> '+answers[5]+' </span> with the DOM Manipulation, and the whole site began to look like <span class="fill"> '+answers[6]+' </span> <br> Luckily, a good friend, <span class="fill"> '+answers[7]+'</span>was able to help, and together they made a <span class="fill"> '+answers[8]+'</span>.');
-  //then hide the botton at the end
-  $('button').hide();
-}
-// run nextPrompt function when button is clicked
-$('button').click(function() {
-	nextPrompt();
-});
+        //puts user answers into HTML
+        var showFinal = function() {
+          $('.prompt').html('New to the development world, <span class="fill"> '+answers[0]+' </span> and the <span class="fill"> '+answers[1]+' '+answers[2]+' </span> tried their best to make a <span class="fill"> '+answers[3]+' </span> web page about <span class="fill"> '+answers[4]+' </span> . <br> Everything was going well, but then <span class="fill"> '+answers[4]+' </span> <span class="fill"> '+answers[5]+' </span> with the DOM Manipulation, and the whole site began to look like <span class="fill"> '+answers[6]+' </span> <br> Luckily, a good friend, <span class="fill"> '+answers[7]+'</span>was able to help, and together they made a <span class="fill"> '+answers[8]+'</span>.');
+          //then hide the botton at the end
+          $('button').hide();
+          $('.box').hide();
+        }
+        // run nextPrompt function when button is clicked
+        $('button').click(function() {
+          nextPrompt();
+        });
 
-// Show the first prompt as soon as js loads
-nextPrompt();
-</script>
+        // Show the first prompt as soon as js loads
+        nextPrompt();
+        </script>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
